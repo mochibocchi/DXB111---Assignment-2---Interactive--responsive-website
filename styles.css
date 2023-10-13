@@ -91,8 +91,9 @@ body {
 }
 
 .half-hero-title {
+    font-size: 5em;
     position: absolute;
-    bottom: 10vh;
+    bottom: 2.5vh;
     left: 0;
     right: 0;
     text-align: center;
@@ -152,6 +153,8 @@ body {
 }
 
 /* Used the clip art tool here to create polygon bg: https://unused-css.com/tools/clip-path-generator */
+/* Also animated the polygon background when you switch from small window to big window on PC
+    for extra bells and whistles */
 .polygon-background {
     position: absolute;
     top: 0;
@@ -163,7 +166,7 @@ body {
     background-color: #eff9ffdc;
     z-index: 0;
     transition: clip-path 0.5s ease-in-out;
-    margin-top: 500px;
+    margin-top: 250px;
 }
 
 .container,
@@ -187,19 +190,19 @@ body {
     flex-wrap: wrap;
     gap: 50px;
 }
+
 .image-category {
-    width: 400px;
-    height: 300px;
-    filter: drop-shadow(0 0 0.5rem rgb(124, 124, 124)) brightness(60%);
+    width: 600px;
+    height: 500px;
+    filter: drop-shadow(0 0 0.5rem rgb(124, 124, 124)) brightness(70%);
     object-fit: cover;
-  }
-  
+}
+
 .image-category:hover {
-    filter: drop-shadow(0 0 0 rgb(124, 124, 124)) opacity(90%) brightness(70%);
+    filter: drop-shadow(0 0 0 rgb(124, 124, 124)) opacity(90%) brightness(80%);
     animation: image-hover-transition 0.3s;
-    
-  }
-  
+}
+
 .image-text-overlay {
     position: absolute;
     top: 50%;
@@ -207,7 +210,8 @@ body {
     font-size: 3em;
     color: #fff;
     /* allows user to hover over text and still trigger image-transition */
-    pointer-events: none; 
+    pointer-events: none;
+    font-weight: bold;
 }
 
 /* Extra tools for text presentation */
@@ -230,10 +234,22 @@ footer {
     align-items: center;
     color: white;
     height: 100px;
+    /* Stack the social media icons below the © 2023 Timmy Ha */
+    flex-direction: column;
+}
+
+footer .fa {
+    font-size: 1.5em;
+    letter-spacing: 1em;
+    color: white;
 }
 
 footer p {
     margin-top: 0px;
+}
+
+.footer-icons {
+    margin-top: 1em;
 }
 
 #blurb h1 {
@@ -241,12 +257,17 @@ footer p {
 }
 
 
-.flex-container {
+.flex-container-row,
+.flex-container-column {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 25px;
 }
 
+.flex-container-column {
+    flex-direction: column;
+}
 
 /* Tablet screen size*/
 @media (min-width: 800px) {
@@ -274,7 +295,7 @@ footer p {
     }
 
     .polygon-background {
-        margin-top: 250px;
+        margin-top: 150px;
     }
 }
 
@@ -304,6 +325,8 @@ footer p {
 }
 
 /* Animations */
+
+/* Add an animation for the drop-down arrow on index.html */
 @keyframes bounce {
 
     0%,
@@ -316,11 +339,13 @@ footer p {
     }
 }
 
+/* Animation for hovering over image */
 @keyframes image-hover-transition {
     0% {
-        filter: drop-shadow(0 0 0.5rem rgb(124, 124, 124)) opacity(100%) brightness(60%);
+        filter: drop-shadow(0 0 0.5rem rgb(124, 124, 124)) opacity(100%) brightness(70%);
     }
+
     100% {
-        filter: drop-shadow(0 0 0 rgb(124, 124, 124)) opacity(90%) brightness(70%);
+        filter: drop-shadow(0 0 0 rgb(124, 124, 124)) opacity(90%) brightness(80%);
     }
-  }
+}
