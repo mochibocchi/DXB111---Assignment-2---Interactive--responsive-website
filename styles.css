@@ -286,6 +286,65 @@ footer {
     flex-direction: column;
 }
 
+/* CSS specification for contact me form for contact.html*/
+
+.container-contact {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgb(245, 245, 245);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#first-name,
+#last-name,
+#subject {
+    padding-left: 10px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.name-fields {
+    display: flex;
+}
+
+.name-fields input {
+    flex: 1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#subject,
+#message {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+input[type=submit] {
+    background-color: #95c3ff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #a6cafa;
+}
+
+
+/* Footer */
 footer .fa {
     font-size: 1.5em;
     letter-spacing: 1em;
