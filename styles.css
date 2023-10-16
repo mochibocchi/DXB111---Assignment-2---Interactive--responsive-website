@@ -54,9 +54,9 @@ nav ul a:hover {
     color: grey;
 }
 
-nav ul li a.current {
+[aria-current]
+{
     font-weight: bold;
-    color: black;
 }
 
 .breadcrumb ul {
@@ -174,18 +174,6 @@ body {
     border: 1px solid #db7598;
 }
 
-.fa.fa-angle-down {
-    position: absolute;
-    top: 200px;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 2em;
-    animation: bounce 1.5s ease infinite;
-}
-
-.fa.fa-home {
-    font-size: 1.25em;
-}
-
 /* Used the clip art tool here to create polygon bg: https://unused-css.com/tools/clip-path-generator */
 /* Also animated the polygon background when you switch from small window to big window on PC
     for extra bells and whistles */
@@ -193,7 +181,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    margin-top: 300px;
+    padding-top: 400px;
     width: 100%;
     height: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 78% 100%, 11% 100%, 0 100%);
@@ -366,10 +354,24 @@ footer p {
     margin-top: 50px;
 }
 
+/* Font Awesome properties */
+
+.fa.fa-angle-down {
+    position: absolute;
+    top: 200px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 2em;
+    animation: bounce 1.5s ease infinite;
+}
+
+.fa.fa-home {
+    font-size: 1.25em;
+}
+
 /* Phone screen size*/
 @media (max-width: 800px) {
     .half-hero-title {
-        font-size: 20vw;
+        font-size: 12.5vw;
     }
 
     .image-item-with-filter,
@@ -416,7 +418,7 @@ footer p {
     }
 
     .polygon-background {
-        margin-top: 150px;
+        padding-top: 0px;
     }
 }
 
@@ -440,7 +442,7 @@ footer p {
 
     .polygon-background {
         clip-path: polygon(0 0, 100% 0, 100% 74%, 77% 91%, 11% 100%, 0 86%);
-        margin-top: 550px;
+        padding-top: 550px;
     }
 
     nav ul {
