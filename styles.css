@@ -54,8 +54,7 @@ nav ul a:hover {
     color: grey;
 }
 
-[aria-current]
-{
+[aria-current] {
     font-weight: bold;
 }
 
