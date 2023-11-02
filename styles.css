@@ -180,7 +180,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    padding-top: 400px;
+    padding-top: 300px;
     width: 100%;
     height: 100%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 78% 100%, 11% 100%, 0 100%);
@@ -387,7 +387,7 @@ footer p {
 
 
 /* Tablet screen size*/
-@media (min-width: 800px) {
+@media (min-width: 768px) {
 
     ul a {
         display: inline;
@@ -417,12 +417,13 @@ footer p {
     }
 
     .polygon-background {
+        margin-top: 150px;
         padding-top: 0px;
     }
 }
 
 /* Computer screen size */
-@media (min-width: 1800px) {
+@media (min-width: 1440px) {
     ul a {
         display: inline;
     }
